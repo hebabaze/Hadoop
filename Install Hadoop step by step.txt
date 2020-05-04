@@ -26,14 +26,14 @@ Step 3 :  Configure environment
 	7.source ~/.bashrc
 	8.cd /usr/local/hadoop/etc/hadoop
 	8. ls
+	
 	9. sudo nano hadoop-env.sh
- 
- #define Java Path 
+  #define Java Path 
     verify path with command : $ readlink -f /usr/bin/java | sed "s:bin/java::"
     II.Add line :(Java path )
 	    export JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64/  
+	    
 	10. sudo nano core-site.xml
-	
     III. add Lines :
 	
 	<configuration>
@@ -43,7 +43,7 @@ Step 3 :  Configure environment
 	</property>
 	</configuration>
  
-       12 sudo nano hdfs-site.xml
+       12. sudo nano hdfs-site.xml
 
   VI.Add lines :
 	<configuration>
@@ -71,7 +71,7 @@ Step 3 :  Configure environment
 	</property>
 	</configuration>
 
-	14 sudo nano yarn-site.xml
+	14. sudo nano yarn-site.xml
  VI.Add lines :
 	<configuration>
 	 <property>
@@ -80,10 +80,10 @@ Step 3 :  Configure environment
 	 </property>
 	</configuration>
 Step 4 :Start the cluster
-	#sudo chmod 777 -R /usr/local/hadoop/
-	# hdfs namenode -format
-	# start-dfs.sh
-	# start-yarn.sh
-	# jps
+	15.sudo chmod 777 -R /usr/local/hadoop/
+	16. hdfs namenode -format
+	17 start-dfs.sh
+	18 start-yarn.sh
+	19 jps
 	
 ...
