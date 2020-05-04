@@ -10,18 +10,18 @@ Step 2 — Installing Hadoop
 Step 3 :  Configure environment
 	6.sudo nano ~/.bashrc
     I.Add the following path variables in it (verify ur java Path in first line)
-#HADOOP VARIABLES START
-export JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64/ 
-export HADOOP_INSTALL=/usr/local/hadoop
-export PATH=$PATH:$HADOOP_INSTALL/bin
-export PATH=$PATH:$HADOOP_INSTALL/sbin
-export HADOOP_MAPRED_HOME=$HADOOP_INSTALL
-export HADOOP_COMMON_HOME=$HADOOP_INSTALL
-export HADOOP_HDFS_HOME=$HADOOP_INSTALL
-export YARN_HOME=$HADOOP_INSTALL
-export HADOOP_COMMON_LIB_NATIVE_DIR=$HADOOP_INSTALL/lib/native
-export HADOOP_OPTS="-Djava.library.path=$HADOOP_INSTALL/lib"
-#HADOOP VARIABLES END
+		#HADOOP VARIABLES START
+		export JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64/ 
+		export HADOOP_INSTALL=/usr/local/hadoop
+		export PATH=$PATH:$HADOOP_INSTALL/bin
+		export PATH=$PATH:$HADOOP_INSTALL/sbin
+		export HADOOP_MAPRED_HOME=$HADOOP_INSTALL
+		export HADOOP_COMMON_HOME=$HADOOP_INSTALL
+		export HADOOP_HDFS_HOME=$HADOOP_INSTALL
+		export YARN_HOME=$HADOOP_INSTALL
+		export HADOOP_COMMON_LIB_NATIVE_DIR=$HADOOP_INSTALL/lib/native
+		export HADOOP_OPTS="-Djava.library.path=$HADOOP_INSTALL/lib"
+		#HADOOP VARIABLES END
 # Load configure
 	7.source ~/.bashrc
 	8.cd /usr/local/hadoop/etc/hadoop
