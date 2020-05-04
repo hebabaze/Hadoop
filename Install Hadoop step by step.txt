@@ -9,8 +9,8 @@ Step 2 — Installing Hadoop
 
 Step 3 :  Configure environment
 	6.sudo nano ~/.bashrc
-    I.add the following path variables in it (verify ur java Path in first line)
-	     #HADOOP VARIABLES START
+    I.Add the following path variables in it (verify ur java Path in first line)
+	      #HADOOP VARIABLES START
      	  export JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64/ 
      	  export HADOOP_INSTALL=/usr/local/hadoop
 	      export PATH=$PATH:$HADOOP_INSTALL/bin
@@ -30,9 +30,10 @@ Step 3 :  Configure environment
  
  #define Java Path 
     verify path with command : $ readlink -f /usr/bin/java | sed "s:bin/java::"
-    II.add line :(Java path )
+    II.Add line :(Java path )
 	    export JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64/  
 	10. sudo nano core-site.xml
+	
     III. add Lines :
 	
 	<configuration>
