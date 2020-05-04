@@ -86,4 +86,3 @@ Step 4 :Start the cluster
 	18 start-yarn.sh
 	19 jps
 	
-...
