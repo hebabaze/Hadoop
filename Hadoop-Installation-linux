@@ -1,5 +1,5 @@
 Step 1 — Installing Java
-	1. sudo apt-get install default-jdk
+	* Install Java First
 	2. java -version
 
 Step 2 — Installing Hadoop
