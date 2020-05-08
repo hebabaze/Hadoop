@@ -98,5 +98,7 @@ Step 5 :Start Hadoop Cluster
 	start-dfs.sh
 	jsp 
 	** to verify from web navigator 
-	http://localhost:9870
+	# NameNode 	   : http://localhost:9870/
+	# RessourceManager  : http://localhost:8088/
+	# 
 
