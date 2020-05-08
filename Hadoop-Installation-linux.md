@@ -30,9 +30,10 @@
 	
 
 > Load configure
+
 	$source ~/.bashrc
 		
-Modify First FILE : hadoop-env.sh
+- [x] Modify First FILE : hadoop-env.sh
 	8.cd /usr/local/hadoop/etc/hadoop
   	**define Java Path 
     	**verify JAVA path in your system with command :  readlink -f /usr/bin/java | sed "s:bin/java::"
