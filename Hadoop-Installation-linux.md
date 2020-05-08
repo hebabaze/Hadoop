@@ -1,4 +1,4 @@
-# How To Install Hadoop 3
+# How To Install Hadoop 3 On Linux
 
 
 Step 1 — Installing Java
