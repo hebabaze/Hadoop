@@ -11,9 +11,9 @@
 	$sudo mv /usr/local/hadoop-* /usr/local/hadoop
 	
 
-Step 3 :  Configure environment
-	6.sudo nano ~/.bashrc
-    	**.Add the following path variables in it (verify ur java Path in first line)
+## Step 3 :  Configure environment
+	$sudo nano ~/.bashrc
+    	> Add the following path variables in it (verify ur java Path in first line)
     	#JAVA VARIABLE
 	export JAVA_HOME=/usr/lib/jvm/java-14-oracle/
 	#HADOOP VARIABLES
