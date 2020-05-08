@@ -13,7 +13,7 @@
 
 ## Step 3 :  Configure environment
 	$sudo nano ~/.bashrc
-    	>Add the following path variables in it (verify ur java Path in first line)
+> Add the following path variables in it (verify ur java Path in first line)
     	#JAVA VARIABLE
 	export JAVA_HOME=/usr/lib/jvm/java-14-oracle/
 	#HADOOP VARIABLES
