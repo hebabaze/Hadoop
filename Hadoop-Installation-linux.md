@@ -27,10 +27,10 @@
 	export YARN_HOME=$HADOOP_HOME
 	export HADOOP_COMMON_LIB_NATIVE_DIR=$HADOOP_HOME/lib/native
 	export HADOOP_OPTS="-Djava.library.path=$HADOOP_HOME/lib/native"
-	'''
+	
 
-# Load configure
-	7.source ~/.bashrc
+> Load configure
+	$source ~/.bashrc
 		
 Modify First FILE : hadoop-env.sh
 	8.cd /usr/local/hadoop/etc/hadoop
