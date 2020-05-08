@@ -14,7 +14,8 @@
 ## Step 3 :  Configure environment
 	$sudo nano ~/.bashrc
 > Add the following path variables in it (verify ur java Path in first line)
-    	#JAVA VARIABLE
+    	'''
+	#JAVA VARIABLE
 	export JAVA_HOME=/usr/lib/jvm/java-14-oracle/
 	#HADOOP VARIABLES
 	export HADOOP_HOME=/usr/local/hadoop
@@ -26,6 +27,7 @@
 	export YARN_HOME=$HADOOP_HOME
 	export HADOOP_COMMON_LIB_NATIVE_DIR=$HADOOP_HOME/lib/native
 	export HADOOP_OPTS="-Djava.library.path=$HADOOP_HOME/lib/native"
+	'''
 
 # Load configure
 	7.source ~/.bashrc
