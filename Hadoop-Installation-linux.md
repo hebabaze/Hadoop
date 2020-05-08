@@ -2,8 +2,8 @@
 
 
 ## Step 1 : Installing Java
-	-Install Java First
-	-java -version
+	* Install Java First
+	* java -version
 
 Step 2 — Installing Hadoop
 	3.sudo wget https://downloads.apache.org/hadoop/common/hadoop-3.2.1/hadoop-3.2.1.tar.gz
