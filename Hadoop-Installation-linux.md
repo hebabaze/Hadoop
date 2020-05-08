@@ -6,11 +6,10 @@
 	* java -version
 
 ## Step 2 : Installing Hadoop
-	```
-	$sudo wget https://downloads.apache.org/hadoop/common/hadoop-3.2.1/hadoop-3.2.1.tar.gz
+	'sudo wget https://downloads.apache.org/hadoop/common/hadoop-3.2.1/hadoop-3.2.1.tar.gz
 	$sudo tar zxvf hadoop-* -C /usr/local
 	$sudo mv /usr/local/hadoop-* /usr/local/hadoop
-	```
+	'
 
 Step 3 :  Configure environment
 	6.sudo nano ~/.bashrc
