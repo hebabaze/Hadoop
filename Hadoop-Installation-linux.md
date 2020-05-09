@@ -29,7 +29,7 @@
 	export HADOOP_OPTS="-Djava.library.path=$HADOOP_HOME/lib/native"
 	
 
-> Load configure
+> Load configuration
 
 	$source ~/.bashrc
 		
@@ -115,7 +115,3 @@
 	- [x] NameNode 	   : http://localhost:9870/
 	- [x] RessourceManager  : http://localhost:8088/
 	
-
-##################### Configure Eclipse 
-	1.download and install eclipse Luna 
-	2.copy jar files to dropins directory inside eclipse directory
