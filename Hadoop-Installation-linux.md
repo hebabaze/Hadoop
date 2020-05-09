@@ -65,19 +65,18 @@
 > Add lines :
 
 	<property>
-	<name>dfs.replication</name>
-	<value>1</value>
+		<name>dfs.replication</name>
+		<value>1</value>
 	</property>
 	<property>
-	<name>dfs.namenode.name.dir</name>
-	<value>file:///usr/local/hadoop_store/hdfs/namenode</value>
+		<name>dfs.namenode.name.dir</name>
+		<value>file:///usr/local/hadoop_store/hdfs/namenode</value>
 	</property>
-	<property>
-	<name>dfs.datanode.name.dir</name>
-	<value>file:///usr/local/hadoop_store/hdfs/datanode</value>
+		<property>
+		<name>dfs.datanode.name.dir</name>
+		<value>file:///usr/local/hadoop_store/hdfs/datanode</value>
 	</property>
-	</configuration>
-
+	
 ## Step 7 : MOdify THE FOURTH FILE : mapred-site.xml
 	$sudo nano  mapred-site.xml
 > Add Lines:
@@ -112,6 +111,6 @@
 	$start-dfs.sh
 	$jsp 
 ### to verify from web navigator 
-	- [x] NameNode 	   : http://localhost:9870/
+	- [x] NameNode 	        : http://localhost:9870/
 	- [x] RessourceManager  : http://localhost:8088/
 	
