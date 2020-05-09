@@ -108,7 +108,7 @@
 	$hdfs namenode -format
 ## Step 10 :Start Hadoop Cluster 
 	$cd $HADOOP_HOME/sbin
-	$start-dfs.sh
+	$start-all.sh
 	$jsp 
 ### to verify from web navigator 
 	- [x] NameNode 	        : http://localhost:9870/
