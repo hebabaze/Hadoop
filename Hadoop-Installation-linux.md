@@ -6,13 +6,13 @@
 	* java -version
 
 ## Step 2 : Installing Hadoop
-	$sudo wget https://downloads.apache.org/hadoop/common/hadoop-3.2.1/hadoop-3.2.1.tar.gz
-	$sudo tar zxvf hadoop-* -C /usr/local
-	$sudo mv /usr/local/hadoop-* /usr/local/hadoop
+	$ sudo wget https://downloads.apache.org/hadoop/common/hadoop-3.2.1/hadoop-3.2.1.tar.gz
+	$ sudo tar zxvf hadoop-* -C /usr/local
+	$ sudo mv /usr/local/hadoop-* /usr/local/hadoop
 	
 
 ## Step 3 :  Configure environment
-	$sudo nano ~/.bashrc
+	$ sudo nano ~/.bashrc
 > Add the following path variables in it (verify ur java Path in first line)
     	
 	#JAVA VARIABLE
@@ -31,20 +31,20 @@
 
 > Load configuration
 
-	$source ~/.bashrc
+	$ source ~/.bashrc
 		
 ## Step 4:  Modify First FILE : hadoop-env.sh
-	$cd /usr/local/hadoop/etc/hadoop
+	$ cd /usr/local/hadoop/etc/hadoop
  > define Java Path 
  > verify JAVA path in your system with command :  *readlink -f /usr/bin/java | sed "s:bin/java::"*
 
-	$sudo nano hadoop-env.sh
+	$ sudo nano hadoop-env.sh
   > Add line :(Java path )
   
   	export JAVA_HOME=/usr/lib/jvm/java-14-oracle/
 
 ## Step 5 : Modify Second FILE : core-site.xml 
-	$sudo nano core-site.xml
+	$ sudo nano core-site.xml
 > Add Lines between : <*configuration*>  <*/configuration*>
 
 	<property>
@@ -59,9 +59,9 @@
 ## Step 6 : Modifie Third FILE : hdfs-site.xml
 > befor do that create two folder ,one for namenode and other for datanode
 	 
-	 $mkdir -p /usr/local/hadoop_store/hdfs/namenode
-	 $mkdir -p /usr/local/hadoop_store/hdfs/datanode
-	 $sudo nano hdfs-site.xml
+	 $ mkdir -p /usr/local/hadoop_store/hdfs/namenode
+	 $ mkdir -p /usr/local/hadoop_store/hdfs/datanode
+	 $ sudo nano hdfs-site.xml
 > Add lines :
 
 	<property>
@@ -78,7 +78,7 @@
 	</property>
 	
 ## Step 7 : MOdify THE FOURTH FILE : mapred-site.xml
-	$sudo nano  mapred-site.xml
+	$ sudo nano  mapred-site.xml
 > Add Lines:
 
 	<property>
@@ -96,7 +96,7 @@
 
 ## Step 8 : Modify The fifth FILE: yarn-site.xml
 
-	$sudo nano yarn-site.xml
+	$ sudo nano yarn-site.xml
  > Add lines :
 
 	<property>
@@ -105,11 +105,11 @@
 	</property>
 
 ## Step 9 :CREATE HAdoop file system
-	$hdfs namenode -format
+	$ hdfs namenode -format
 ## Step 10 :Start Hadoop Cluster 
-	$cd $HADOOP_HOME/sbin
-	$start-all.sh
-	$jsp 
+	$ cd $HADOOP_HOME/sbin
+	$ start-all.sh
+	$ jsp 
 ### to verify from web navigator 
 	- [x] NameNode 	        : http://localhost:9870/
 	- [x] RessourceManager  : http://localhost:8088/
