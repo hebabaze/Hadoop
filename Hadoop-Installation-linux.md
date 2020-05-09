@@ -45,7 +45,7 @@
 
 ## Step 5 : Modify Second FILE : core-site.xml 
 	$sudo nano core-site.xml
-> Add Lines between <onfiguration> </configuration>
+> Add Lines between : <configuration> </configuration>
 
 	<property>
 	    <name>hadoop.tmp.dir</name>
