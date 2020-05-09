@@ -61,7 +61,7 @@
 	 
 	 $mkdir -p /usr/local/hadoop_store/hdfs/namenode
 	 $mkdir -p /usr/local/hadoop_store/hdfs/datanode
-         $sudo nano hdfs-site.xml
+	 $sudo nano hdfs-site.xml
 > Add lines :
 
 	<property>
