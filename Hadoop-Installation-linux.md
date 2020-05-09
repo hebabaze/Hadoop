@@ -33,18 +33,20 @@
 
 	$source ~/.bashrc
 		
-- [x] Modify First FILE : hadoop-env.sh
-	8.cd /usr/local/hadoop/etc/hadoop
-  	**define Java Path 
-    	**verify JAVA path in your system with command :  readlink -f /usr/bin/java | sed "s:bin/java::"
-	9.sudo nano hadoop-env.sh
-    	**Add line :(Java path )
-	    export JAVA_HOME=/usr/lib/jvm/java-14-oracle/
+## Step 4:  Modify First FILE : hadoop-env.sh
+	$cd /usr/local/hadoop/etc/hadoop
+ > define Java Path 
+ > verify JAVA path in your system with command :  *readlink -f /usr/bin/java | sed "s:bin/java::"*
 
-Modify Second FILE : core-site.xml 
-	10. sudo nano core-site.xml
-    	**Add Lines between <onfiguration> </configuration>
-	
+	$sudo nano hadoop-env.sh
+  > Add line :(Java path )
+  
+  	export JAVA_HOME=/usr/lib/jvm/java-14-oracle/
+
+## Step 5 : Modify Second FILE : core-site.xml 
+	$sudo nano core-site.xml
+> Add Lines between <onfiguration> </configuration>
+
 	<property>
 	    <name>hadoop.tmp.dir</name>
 	    <value>/app/hadoop/tmp</value>
@@ -54,12 +56,14 @@ Modify Second FILE : core-site.xml
 	    <value>hdfs://localhost:54310</value>
 	  </property>
 
-Modifie Third FILE : hdfs-site.xml
-	**befor do that create two folder ,one for namenode and other for datanode
-	12. mkdir -p /usr/local/hadoop_store/hdfs/namenode
-	13. mkdir -p /usr/local/hadoop_store/hdfs/datanode
-        14.sudo nano hdfs-site.xml
-	#Add lines :
+## Step 6 : Modifie Third FILE : hdfs-site.xml
+> befor do that create two folder ,one for namenode and other for datanode
+	 
+	 $mkdir -p /usr/local/hadoop_store/hdfs/namenode
+	 $mkdir -p /usr/local/hadoop_store/hdfs/datanode
+         $sudo nano hdfs-site.xml
+> Add lines :
+
 	<property>
 	<name>dfs.replication</name>
 	<value>1</value>
@@ -74,9 +78,10 @@ Modifie Third FILE : hdfs-site.xml
 	</property>
 	</configuration>
 
-MOdify THE FOURTH FILE : mapred-site.xml
-	15 .sudo nano  mapred-site.xml
-	**.Add Lines:
+## Step 7 : MOdify THE FOURTH FILE : mapred-site.xml
+	$sudo nano  mapred-site.xml
+> Add Lines:
+
 	<property>
 		 <name>yarn.app.mapreduce.am.env</name>
 		 <value>HADOOP_MAPRED_HOME=$HADOOP_HOME</value>
@@ -90,25 +95,26 @@ MOdify THE FOURTH FILE : mapred-site.xml
 		 <value>HADOOP_MAPRED_HOME=$HADOOP_HOME</value>
 	</property>
 
-Modify The fifth FILE: yarn-site.xml
-	16. sudo nano yarn-site.xml
- 	**Add lines :
-	
+## Step 8 : Modify The fifth FILE: yarn-site.xml
+
+	$sudo nano yarn-site.xml
+ > Add lines :
+
 	<property>
 	<name>yarn.nodemanager.aux-services</name>
 	<value>mapreduce_shuffle</value>
 	</property>
 
-Step 4 :CREATE HAdoop file system
-	hdfs namenode -format
-Step 5 :Start Hadoop Cluster 
-	cd $HADOOP_HOME/sbin
-	start-dfs.sh
-	jsp 
-	** to verify from web navigator 
-	# NameNode 	   : http://localhost:9870/
-	# RessourceManager  : http://localhost:8088/
-	# 
+## Step 9 :CREATE HAdoop file system
+	$hdfs namenode -format
+## Step 10 :Start Hadoop Cluster 
+	$cd $HADOOP_HOME/sbin
+	$start-dfs.sh
+	$jsp 
+### to verify from web navigator 
+	- [x] NameNode 	   : http://localhost:9870/
+	- [x] RessourceManager  : http://localhost:8088/
+	
 
 ##################### Configure Eclipse 
 	1.download and install eclipse Luna 
