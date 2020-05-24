@@ -81,28 +81,32 @@
 	$ sudo nano  mapred-site.xml
 > Add Lines:
 
-	<property>
-		 <name>yarn.app.mapreduce.am.env</name>
-		 <value>HADOOP_MAPRED_HOME=$HADOOP_HOME</value>
-		</property>
-	<property>
-		 <name>mapreduce.map.env</name>
-		 <value>HADOOP_MAPRED_HOME=$HADOOP_HOME</value>
-	</property>
-	<property>
-		 <name>mapreduce.reduce.env</name>
-		 <value>HADOOP_MAPRED_HOME=$HADOOP_HOME</value>
-	</property>
+	<configuration>
+	    <property>
+		<name>mapreduce.framework.name</name>
+		<value>yarn</value>
+	    </property>
+	    <property>
+		<name>mapreduce.application.classpath</name>
+		<value>$HADOOP_MAPRED_HOME/share/hadoop/mapreduce/*:$HADOOP_MAPRED_HOME/share/hadoop/mapreduce/lib/*</value>
+	    </property>
+	</configuration>
 
 ## Step 8 : Modify The fifth FILE: yarn-site.xml
 
 	$ sudo nano yarn-site.xml
  > Add lines :
 
-	<property>
-	<name>yarn.nodemanager.aux-services</name>
-	<value>mapreduce_shuffle</value>
-	</property>
+	<configuration>
+	    <property>
+		<name>yarn.nodemanager.aux-services</name>
+		<value>mapreduce_shuffle</value>
+	    </property>
+	    <property>
+		<name>yarn.nodemanager.env-whitelist</name>
+		<value>JAVA_HOME,HADOOP_COMMON_HOME,HADOOP_HDFS_HOME,HADOOP_CONF_DIR,CLASSPATH_PREPEND_DISTCACHE,HADOOP_YARN_HOME,HADOOP_MAPRED_HOME</value>
+	    </property>
+	</configuration>
 
 ## Step 9 :CREATE HAdoop file system
 	$ hdfs namenode -format
