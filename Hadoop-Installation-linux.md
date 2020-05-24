@@ -47,14 +47,12 @@
 	$ sudo nano core-site.xml
 > Add Lines between : <*configuration*>  <*/configuration*>
 
-	<property>
-	    <name>hadoop.tmp.dir</name>
-	    <value>/app/hadoop/tmp</value>
-	  </property>
-	<property>
-	    <name>fs.defaultFS</name>
-	    <value>hdfs://localhost:54310</value>
-	  </property>
+	<configuration>
+	    <property>
+		<name>fs.defaultFS</name>
+		<value>hdfs://localhost:9000</value>
+	    </property>
+	</configuration>
 
 ## Step 6 : Modifie Third FILE : hdfs-site.xml
 > befor do that create two folder ,one for namenode and other for datanode
@@ -64,18 +62,12 @@
 	 $ sudo nano hdfs-site.xml
 > Add lines :
 
-	<property>
+	<configuration>
+	    <property>
 		<name>dfs.replication</name>
 		<value>1</value>
-	</property>
-	<property>
-		<name>dfs.namenode.name.dir</name>
-		<value>file:///usr/local/hadoop_store/hdfs/namenode</value>
-	</property>
-		<property>
-		<name>dfs.datanode.name.dir</name>
-		<value>file:///usr/local/hadoop_store/hdfs/datanode</value>
-	</property>
+	    </property>
+	</configuration>
 	
 ## Step 7 : MOdify THE FOURTH FILE : mapred-site.xml
 	$ sudo nano  mapred-site.xml
